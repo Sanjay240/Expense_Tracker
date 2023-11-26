@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
-import image1 from '../Images/loginImage.png';
 import { useGlobalContext } from '../Context/globalContext';
-import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     
 
     const {logUser } = useGlobalContext();
-    const navigate = useNavigate();
     const[inputState, setInputState] = useState({
         email: '',
         password: ''
     })
 
-    const [loggedIn, setLoggedIn] = useState(false);
-    const { email, password} = inputState;
 
     const handleInput = name => e => {
         setInputState({...inputState, [name]: e.target.value})
@@ -99,7 +94,7 @@ const Login = () => {
                 <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                    className="img-fluid" alt="Sample image" />
+                    className="img-fluid" alt="Sample" />
 
                 </div>
             </div>

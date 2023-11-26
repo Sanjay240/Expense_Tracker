@@ -5,13 +5,11 @@ import Dashboard from '../Components/Dashboard';
 import Income from '../Components/Income';
 import Expense from '../Components/Expense';
 import Report from '../Components/Report';
-import { useGlobalContext } from '../Context/globalContext';
 import Discussion from '../Components/Discussion';
 
 function Home() {
 
   const [ active, setActive] = useState(1)
-  const global = useGlobalContext()
 
   const displayData = () => {
     switch(active){

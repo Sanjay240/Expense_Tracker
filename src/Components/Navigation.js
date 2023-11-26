@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import avatar from  '../Images/avatar.jpg';
 import { menuItems } from '../Utils/MenuItems'
 import { signout } from '../Utils/Icons';
@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 function Navigation({active, setActive}) {
 
-    const {logUser, setLoggedIn, logoutUser} = useGlobalContext();
+    const {logoutUser} = useGlobalContext();
     const navigate = useNavigate();
 
     const handleSignOut = (event) =>{

@@ -28,7 +28,7 @@ function Index() {
           <div className='button'><Link to="/register">Register now</Link></div>
         </div>
         <div className='logo-pic'>
-          <img src= {indexlogo}></img>
+          <img src= {indexlogo} alt=''></img>
         </div>
       </div>
     </div>

@@ -5,11 +5,11 @@ import IncomeItem from './IncomeItem';
 import '../Styles/income.css'
 
 function Incomes() {
-    const {addTransaction, incomes, getTransactions, deleteTransaction, totalIncome} = useGlobalContext()
+    const { incomes, getTransactions, deleteTransaction, totalIncome} = useGlobalContext()
 
     useEffect(() => {
         getTransactions()
-    }, [])
+    })
   return (
     <div className='income'>
         <div className='inner-layout'>

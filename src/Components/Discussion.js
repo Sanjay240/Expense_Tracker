@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../Styles/discussion.css'
-import {like, send, user} from '../Utils/Icons';
 import { useGlobalContext } from '../Context/globalContext';
 import MessageItem from './MessageItem';
-import Button from './Button';
 
 function Discussion() {
   const {message, getMessages, addMessage, updateMessage} = useGlobalContext()
@@ -15,7 +13,7 @@ function Discussion() {
   })
 
 
-  const {note, likes, user_id} = inputState;
+  const {note} = inputState;
     
 
     const handleInput = name => e => {
@@ -34,7 +32,7 @@ function Discussion() {
 
   useEffect(() => {
     getMessages()
-}, [])
+})
 
   return (
     <div className='discussion'>
