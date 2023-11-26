@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useGlobalContext } from '../Context/globalContext';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     
-
+    const navigate = useNavigate();
     const {logUser } = useGlobalContext();
     const[inputState, setInputState] = useState({
         email: '',
@@ -25,7 +26,7 @@ const Login = () => {
                 localStorage.setItem('userId', result.data.id);  
 
                 console.log('logged in user navigate to home page');
-                // navigate('/home');
+                navigate('/home');
                 window.location.reload(true);
                 console.log('navigated to home page');
             }
