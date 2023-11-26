@@ -14,7 +14,7 @@ const Register = () => {
         type: 'user',
     })
 
-    const {name, email, password, cpassword} = inputState;
+    const {password, cpassword} = inputState;
 
     const handleInput = name => e => {
         setInputState({...inputState, [name]: e.target.value})
