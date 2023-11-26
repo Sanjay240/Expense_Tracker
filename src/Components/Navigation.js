@@ -14,14 +14,17 @@ function Navigation({active, setActive}) {
     const navigate = useNavigate();
 
     const handleSignOut = (event) =>{
-       logoutUser().then ((res) => {
-        console.log(`This is logout in navigation ${res}`);
-        if(res.status === 'success'){
-            localStorage.clear();
-            window.location.reload(true);
-            navigate("");
-        }
-       })
+    //    logoutUser().then ((res) => {
+    //     console.log(`This is logout in navigation ${res}`);
+    //     if(res.status === 'success'){
+    //         localStorage.clear();
+    //         window.location.reload(true);
+    //         navigate("");
+    //     }
+    //    })
+    localStorage.clear();
+    window.location.reload(true);
+    navigate("");
     }
     const userName = localStorage.getItem("userName");
     const userEmail = localStorage.getItem("userEmail");
