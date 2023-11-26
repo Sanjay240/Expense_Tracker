@@ -12,7 +12,7 @@ function Dashboard() {
 
   useEffect(() => {
    getTransactions()
-  })
+  }, [])
 
   return (
         <DashboardStyled>

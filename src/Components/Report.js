@@ -10,7 +10,7 @@ function Report() {
     useEffect(() => {
       users();
       totalTransaction();
-    })
+    }, [])
   return (
     <ReportStyled>
      <div className='inner-layout'>

@@ -23,8 +23,8 @@ function Navigation({active, setActive}) {
     //     }
     //    })
     localStorage.clear();
+    navigate("/login");
     window.location.reload(true);
-    navigate("");
     }
     const userName = localStorage.getItem("userName");
     const userEmail = localStorage.getItem("userEmail");

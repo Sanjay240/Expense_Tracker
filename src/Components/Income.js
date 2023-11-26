@@ -9,7 +9,7 @@ function Incomes() {
 
     useEffect(() => {
         getTransactions()
-    })
+    }, [])
   return (
     <div className='income'>
         <div className='inner-layout'>

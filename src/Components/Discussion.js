@@ -32,7 +32,7 @@ function Discussion() {
 
   useEffect(() => {
     getMessages()
-})
+}, [])
 
   return (
     <div className='discussion'>
