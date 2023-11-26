@@ -39,10 +39,10 @@ function App() {
     <div className="app">
     <Router>
     <Routes>
-      <Route path="" element={!auth ? <Index /> : <Navigate to='/home' element={<Home />}/>} />
-      <Route path= "/login" element={!auth ? <Login /> : <Navigate to='/home' element={<Home />}/>} />
-      <Route path= "/register" element={!auth ? <Register /> : <Navigate to='/home' element={<Home />}/>} />
-      <Route path= "/home"  element = { auth ? <Home /> : <Navigate to='/login' element={<Login />}/>}  />
+      <Route path="" element={!true ? <Index /> : <Navigate to='/home' element={<Home />}/>} />
+      <Route path= "/login" element={!true ? <Login /> : <Navigate to='/home' element={<Home />}/>} />
+      <Route path= "/register" element={!true ? <Register /> : <Navigate to='/home' element={<Home />}/>} />
+      <Route path= "/home"  element = { true ? <Home /> : <Navigate to='/login' element={<Login />}/>}  />
     </Routes>
   </Router>
   </div>
