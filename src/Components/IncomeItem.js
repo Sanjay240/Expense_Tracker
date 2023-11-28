@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { bitcoin, book, calender, card, circle, clothing, comment, dollar, food, freelance, medical, money, piggy, stocks, trash, tv, users, yt } from '../Utils/Icons';
+import { bitcoin, book, calender, card, circle, clothing, comment, dollar, food, freelance, medical, money, piggy, stocks, trash, tv, users, yt, edit } from '../Utils/Icons';
 import Button from './Button';
 import { dateFormat } from '../Utils/DateFormat';
 
-function IncomeItem({
-    id, title, amount, date, category, description, deleteItem, indicatorColor, type, updateItem,
-}) {
+function IncomeItem({id, title, amount, date, category, description, deleteItem, indicatorColor, type, updateItem}) {
     
     const  categoryIcon = () => {
         switch(category) {
@@ -78,7 +76,7 @@ function IncomeItem({
                         onClick={() => deleteItem(id)}
                     />
                      <Button 
-                        icon={trash}
+                        icon={edit}
                         bPad={'1rem'}
                         bRad={'50%'}
                         bg={'var(--primary-color'}
