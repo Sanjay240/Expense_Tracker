@@ -47,19 +47,19 @@ function Dashboard() {
                     <h2 className='salary-title'>Min <span>Income</span>Max</h2>
                     <div className='salary-item'>
                       <p>
-                        {Math.min(...incomes.map((item) =>item.trans_amount)) !== 'Infinity' ? Math.min(...incomes.map((item) =>item.trans_amount)) : 0} 
+                        {Math.min(...incomes.map((item) =>item.trans_amount)) != 'Infinity' ? Math.min(...incomes.map((item) =>item.trans_amount)) : 0} 
                       </p>
                       <p>
-                        {Math.max(...incomes.map((item) =>item.trans_amount)) !== '-Infinity' ? Math.max(...incomes.map((item) =>item.trans_amount)) : 0}
+                        {Math.max(...incomes.map((item) =>item.trans_amount)) != '-Infinity' ? Math.max(...incomes.map((item) =>item.trans_amount)) : 0}
                       </p>
                     </div>
                     <h2 className='salary-title'>Min <span>Expense</span>Max</h2>
                     <div className='salary-item'>
                       <p>
-                        {Math.min(...expenses.map((item) =>item.trans_amount)) !== 'Infinity' ? Math.min(...expenses.map((item) =>item.trans_amount)) : 0 }
+                        {Math.min(...expenses.map((item) =>item.trans_amount)) != 'Infinity' ? Math.min(...expenses.map((item) =>item.trans_amount)) : 0 }
                       </p>
                       <p>
-                        {Math.max(...expenses.map((item) =>item.trans_amount)) !== '-Infinity' ? Math.max(...expenses.map((item) =>item.trans_amount)) : 0 }
+                        {Math.max(...expenses.map((item) =>item.trans_amount)) != '-Infinity' ? Math.max(...expenses.map((item) =>item.trans_amount)) : 0 }
                       </p>
                     </div>
                   </div>

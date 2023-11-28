@@ -5,7 +5,7 @@ import Button from './Button';
 import { dateFormat } from '../Utils/DateFormat';
 
 function IncomeItem({
-    id, title, amount, date, category, description, deleteItem, indicatorColor, type
+    id, title, amount, date, category, description, deleteItem, indicatorColor, type, updateItem,
 }) {
     
     const  categoryIcon = () => {
@@ -76,6 +76,14 @@ function IncomeItem({
                         bg={'var(--primary-color'}
                         color={'#fff'}
                         onClick={() => deleteItem(id)}
+                    />
+                     <Button 
+                        icon={trash}
+                        bPad={'1rem'}
+                        bRad={'50%'}
+                        bg={'var(--primary-color'}
+                        color={'#fff'}
+                        onClick={() => updateItem()}
                     />
                 </div>
             </div>

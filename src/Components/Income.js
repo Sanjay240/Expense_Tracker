@@ -1,11 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useGlobalContext } from '../Context/globalContext';
 import IncomeForm from './IncomeForm';
 import IncomeItem from './IncomeItem';
 import '../Styles/income.css'
+import Popup from './Popup';
 
 function Incomes() {
     const { incomes, getTransactions, deleteTransaction, totalIncome} = useGlobalContext()
+    const [openPopup , setOpenPopup] = useState('false');
+
+    const updateTransaction = () => {
+        setOpenPopup(true);
+    }
 
     useEffect(() => {
         getTransactions()
@@ -33,11 +39,16 @@ function Incomes() {
                             type ={trans_type}
                             indicatorColor="var(--color-green)"
                             deleteItem={deleteTransaction}
+                            updateItem = {updateTransaction}
                         />
                    } )}
                 </div>
             </div>
         </div>
+        <Popup>
+            openPopup = {openPopup}
+            setOpenPopup = {setOpenPopup}
+        </Popup>
     </div>
   )
 }
