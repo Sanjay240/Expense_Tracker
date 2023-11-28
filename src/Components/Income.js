@@ -4,23 +4,38 @@ import IncomeForm from './IncomeForm';
 import IncomeItem from './IncomeItem';
 import '../Styles/income.css'
 import Popup from './Popup';
+import UpdateTransactionForm from './UpdateTransactionForm';
 
 function Incomes() {
     const { incomes, getTransactions, deleteTransaction, totalIncome} = useGlobalContext()
-    const [openPopup , setOpenPopup] = useState(false);
-    const [randomState, setrandomState] = useState("abc");
+    const [OpenPopup , setOpenPopup] = useState(false);
+    const [transForEdit, setTransForEdit] = useState({
+        title: '',
+        amount: '',
+        date: '',
+        category: '',
+        description: '',
+        type: '',
+    })
 
-    const updateTransaction = () => {
+    const updateTransaction = (props) => {
+        setTransForEdit({
+            title: props.title,
+            amount: props.amount,
+            date:  props.date,
+            category: props.category,
+            description: props.description ,
+            type: props.type,
+            id: props.id,
+            setOpenPopup: setOpenPopup,
+        })
         setOpenPopup(true);
-        console.log('Open popup set to:' + openPopup);
-        setrandomState('efg');
-        console.log('Random state set to: '+ randomState);
+       
     }
 
     useEffect(() => {
         getTransactions()
-        console.log(openPopup);
-    }, [openPopup])
+    }, [OpenPopup])
   return (
     <div className='income'>
         <div className='inner-layout'>
@@ -50,9 +65,12 @@ function Incomes() {
                 </div>
             </div>
         </div>
-        <Popup>
-            openPopup = {openPopup}
+        <Popup
+            title = "Update Transaction"
+            openPopup = {OpenPopup}
             setOpenPopup = {setOpenPopup}
+        >
+            <UpdateTransactionForm trans = {transForEdit}/>
         </Popup>
     </div>
   )

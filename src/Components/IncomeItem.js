@@ -84,7 +84,7 @@ function IncomeItem({id, title, amount, date, category, description, deleteItem,
                         bRad={'50%'}
                         bg={'var(--primary-color'}
                         color={'#fff'}
-                        onClick={() => updateItem()}
+                        onClick={() => updateItem({id,title,amount, type, date, category, description})}
                     />
                 </div>
             </div>

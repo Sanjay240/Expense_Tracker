@@ -31,3 +31,4 @@ export const send = <i className="fa-regular fa-paper-plane"></i>
 export const user = <i className="fa-solid fa-user"></i>
 export const like = <i className="fa-regular fa-heart"></i>
 export const edit = <i class="fa-solid fa-pen-to-square"></i>
+export const close = <i class="fa-solid fa-x"></i>

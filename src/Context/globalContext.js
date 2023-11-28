@@ -106,6 +106,15 @@ export const GlobalProvider = ({children}) => {
                 })
         getTransactions()
     }
+
+    const insertTransaction = async (trans) => {
+        console.log(trans);
+        await axios.post(`${BASE_URL}/transaction/updateTrans`, trans)
+                    .catch((err) => {
+                        console.log(err)
+                    })
+            getTransactions()
+    }
    
     const getTransactions = async () => {
         const user_id = localStorage.getItem('userId');
@@ -192,7 +201,7 @@ export const GlobalProvider = ({children}) => {
             {
                 addTransaction , getTransactions, incomes, deleteTransaction, totalIncome,
                 expenses, totalExpense, Balance, transactionHistory, getMessages, addMessage, updateMessage, message, registerUser,  logUser,
-                verifyUser, logoutUser, users, usersName, totalTransaction, transaction
+                verifyUser, logoutUser, users, usersName, totalTransaction, transaction, insertTransaction
             }}>
             {children}
         </GlobalContext.Provider>
