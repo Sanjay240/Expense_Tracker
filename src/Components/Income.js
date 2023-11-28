@@ -8,10 +8,13 @@ import Popup from './Popup';
 function Incomes() {
     const { incomes, getTransactions, deleteTransaction, totalIncome} = useGlobalContext()
     const [openPopup , setOpenPopup] = useState(false);
+    const [randomState, setrandomState] = useState("abc");
 
     const updateTransaction = () => {
         setOpenPopup(true);
         console.log('Open popup set to:' + openPopup);
+        setrandomState('efg');
+        console.log('Random state set to: '+ randomState);
     }
 
     useEffect(() => {
