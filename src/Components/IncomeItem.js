@@ -73,7 +73,10 @@ function IncomeItem({id, title, amount, date, category, description, deleteItem,
                         bRad={'50%'}
                         bg={'var(--primary-color'}
                         color={'#fff'}
-                        onClick={() => deleteItem(id)}
+                        onClick={() => {
+                            deleteItem(id)
+                            window.location.reload(true);
+                            }}
                     />
                      <Button 
                         icon={edit}
