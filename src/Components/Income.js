@@ -10,7 +10,8 @@ function Incomes() {
     const [openPopup , setOpenPopup] = useState('false');
 
     const updateTransaction = () => {
-        setOpenPopup(true);
+        setOpenPopup('true');
+        console.log('Open popup set to:' + openPopup);
     }
 
     useEffect(() => {
