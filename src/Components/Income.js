@@ -7,10 +7,10 @@ import Popup from './Popup';
 
 function Incomes() {
     const { incomes, getTransactions, deleteTransaction, totalIncome} = useGlobalContext()
-    const [openPopup , setOpenPopup] = useState('false');
+    const [openPopup , setOpenPopup] = useState(false);
 
     const updateTransaction = () => {
-        setOpenPopup('true');
+        setOpenPopup(true);
         console.log('Open popup set to:' + openPopup);
     }
 
