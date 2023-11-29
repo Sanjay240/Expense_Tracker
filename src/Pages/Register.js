@@ -1,3 +1,4 @@
+/** Register page show the registration form and redirect back to login on successful registraion. */
 import React, { useState } from 'react';
 import { useGlobalContext } from '../Context/globalContext';
 import { useNavigate } from "react-router-dom";
@@ -71,7 +72,7 @@ const Register = () => {
                         <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
-                            <input type="text" id="name" className="form-control" name='name' onChange={handleInput('name')} />
+                            <input type="text" id="name" className="form-control" name='name' onChange={handleInput('name')} required />
                             <label className="form-label" htmlFor="name">Your Name</label>
                         </div>
                         </div>
@@ -79,7 +80,7 @@ const Register = () => {
                         <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
-                            <input type="email" id="form3Example3c" className="form-control" name='email' onChange={handleInput('email')}/>
+                            <input type="email" id="form3Example3c" className="form-control" name='email' onChange={handleInput('email')} required/>
                             <label className="form-label" htmlFor="form3Example3c">Your Email</label>
                         </div>
                         </div>
@@ -87,7 +88,7 @@ const Register = () => {
                         <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
-                            <input type="password" id="form3Example4c" className="form-control" name='password' onChange={handleInput('password')} />
+                            <input type="password" id="form3Example4c" className="form-control" name='password' onChange={handleInput('password')} required/>
                             <label className="form-label" htmlFor="form3Example4c">Password</label>
                         </div>
                         </div>
@@ -95,7 +96,7 @@ const Register = () => {
                         <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-key fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
-                            <input type="password" id="form3Example4cd" className="form-control" name='cpassword' onChange={handleInput('cpassword')}/>
+                            <input type="password" id="form3Example4cd" className="form-control" name='cpassword' onChange={handleInput('cpassword')} required/>
                             <label className="form-label" htmlFor="form3Example4cd">Repeat your password</label>
                         </div>
                         </div>

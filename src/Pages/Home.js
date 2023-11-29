@@ -1,3 +1,4 @@
+/** Home Page loads all the components and set the display section. */
 import { useState } from 'react';
 import Navigation from '../Components/Navigation';
 import '../Styles/app.css';

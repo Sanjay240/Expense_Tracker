@@ -1,3 +1,4 @@
+/** Income Item is used to style the income and expense shown on the income and expense pages.  */
 import React from 'react'
 import styled from 'styled-components'
 import { bitcoin, book, calender, card, circle, clothing, comment, dollar, food, freelance, medical, money, piggy, stocks, trash, tv, users, yt, edit } from '../Utils/Icons';

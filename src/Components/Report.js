@@ -1,3 +1,4 @@
+/** Reports component is only visible to admin. it shows total number of users registered and total number of transaction in the database. */
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { user , transactions} from '../Utils/Icons';

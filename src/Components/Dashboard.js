@@ -1,3 +1,4 @@
+/** This is the main dasboard component. It shown the chart then total amount of income and total amount for the expense. Then on right side it shows latest 3 transactions and below that maximum and minumum amount for both expense and income. */
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Chart from './Chart';

@@ -1,3 +1,4 @@
+/** This is the first page of the website and show nav option and login and register option. */
 import React from 'react'
 import { Link } from 'react-router-dom'
 import indexlogo from '../Images/loginImage.png';

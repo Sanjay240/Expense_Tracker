@@ -1,3 +1,4 @@
+/** THis is the main component all the components are loaded to this root component.  */
 import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
@@ -19,20 +20,20 @@ function App() {
   const {verifyUser } = useGlobalContext();
 
   useEffect(() => {
-    verifyUser()
-      .then((res) => {
-       // console.log(res);
-        if(res.status === 'Success'){
-        //  console.log('logged in user verfied');
-          setAuth(true);
-        //  console.log(`the user verify is ${auth}`);
-        }
-        else {
-          setAuth(false);
-         // console.log(`the user verify is ${auth}`);
+    // verifyUser()
+    //   .then((res) => {
+    //    // console.log(res);
+    //     if(res.status === 'Success'){
+    //     //  console.log('logged in user verfied');
+    //       setAuth(true);
+    //     //  console.log(`the user verify is ${auth}`);
+    //     }
+    //     else {
+    //       setAuth(false);
+    //      // console.log(`the user verify is ${auth}`);
          
-        }
-      })
+    //     }
+    //   })
   })
 
   return (

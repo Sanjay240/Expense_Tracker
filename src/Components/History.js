@@ -1,3 +1,4 @@
+/** History component map through all the transaction and select recent 3 transaction if the type is expense than the font color is set to red or if it is an income then font color is green. */
 import React from 'react'
 import styled from 'styled-components'
 import { useGlobalContext } from '../Context/globalContext';

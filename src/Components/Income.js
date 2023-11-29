@@ -1,3 +1,4 @@
+/** Income component show the income form to add a new income and all the income for logged in user. Also total amount for the incomes added. */
 import React, { useEffect, useState } from 'react'
 import { useGlobalContext } from '../Context/globalContext';
 import IncomeForm from './IncomeForm';

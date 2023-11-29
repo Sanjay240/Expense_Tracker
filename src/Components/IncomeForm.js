@@ -1,3 +1,4 @@
+/** Income form to add a new income this component is used in income.js component. */
 import React, { useState } from 'react';
 import { useGlobalContext } from '../Context/globalContext';
 import Button from './Button';
@@ -48,6 +49,7 @@ function Form() {
             name={'title'}
             placeholder='Income Title'
             onChange={handleInput('title')}
+            required
              />
         </div>
         <div className='input-control'>
@@ -57,10 +59,11 @@ function Form() {
             name={'amount'}
             placeholder='Income Amount'
             onChange={handleInput('amount')}
+            required
              />
         </div>
         <div className='input-control'>
-            <input type='date' value={date} name='date' onChange={handleInput('date')} />
+            <input type='date' value={date} name='date' onChange={handleInput('date')}   required/>
            
           
         </div>

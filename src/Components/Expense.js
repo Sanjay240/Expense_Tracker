@@ -1,11 +1,38 @@
-import React, { useEffect } from 'react'
+/** This component shows the expense form to add  new expense and also shows all the expense transactions added. At the top shows total amount of the expense. */
+import React, { useEffect, useState} from 'react'
 import { useGlobalContext } from '../Context/globalContext';
 import ExpenseForm from './ExpenseForm';
 import IncomeItem from './IncomeItem';
 import '../Styles/expense.css'
+import Popup from './Popup';
+import UpdateTransactionForm from './UpdateTransactionForm';
 
 function Incomes() {
     const { expenses, getTransactions, deleteTransaction, totalExpense} = useGlobalContext()
+    const [OpenPopup , setOpenPopup] = useState(false);
+    const [transForEdit, setTransForEdit] = useState({
+        title: '',
+        amount: '',
+        date: '',
+        category: '',
+        description: '',
+        type: '',
+    })
+
+    const updateTransaction = (props) => {
+        setTransForEdit({
+            title: props.title,
+            amount: props.amount,
+            date:  props.date,
+            category: props.category,
+            description: props.description ,
+            type: props.type,
+            id: props.id,
+            setOpenPopup: setOpenPopup,
+        })
+        setOpenPopup(true);
+       
+    }
 
     useEffect(() => {
         getTransactions()
@@ -22,7 +49,6 @@ function Incomes() {
                 <div className='incomes'>
                    {expenses.map((expense) =>{
                         const {trans_id, trans_title, trans_amount, trans_date, trans_category, trans_note, trans_type} = expense;
-                        console.log(trans_note);
                         return <IncomeItem
                             key={trans_id}
                             id={trans_id}
@@ -34,11 +60,19 @@ function Incomes() {
                             type ={trans_type}
                             indicatorColor="var(--color-delete)"
                             deleteItem={deleteTransaction}
+                            updateItem = {updateTransaction}
                         />
                    } )}
                 </div>
             </div>
         </div>
+        <Popup
+            title = "Update Transaction"
+            openPopup = {OpenPopup}
+            setOpenPopup = {setOpenPopup}
+        >
+            <UpdateTransactionForm trans = {transForEdit}/>
+        </Popup>
     </div>
   )
 }

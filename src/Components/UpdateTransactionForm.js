@@ -1,3 +1,4 @@
+/** Update Transaction form is shown in the pop window to update any transaction.  */
 import React, { useState } from 'react';
 import { useGlobalContext } from '../Context/globalContext';
 import Button from './Button';
@@ -30,6 +31,7 @@ function UpdateTransactionForm(trans) {
         }
         getTransactions();
         trans.trans.setOpenPopup(false);
+        window.location.reload(true);
 
     }
 

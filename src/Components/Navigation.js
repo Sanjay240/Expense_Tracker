@@ -1,3 +1,4 @@
+/** Navigation component shows navigation opation for the users. Show details of the user logged in. Also check the user type to show reports tab. */
 import React from 'react'
 import avatar from  '../Images/avatar.jpg';
 import { menuItems } from '../Utils/MenuItems'

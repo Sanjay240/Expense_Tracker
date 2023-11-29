@@ -1,3 +1,4 @@
+/** All the calls to the API are made in this file */
 import React, { useContext, useState } from "react";
 import axios from 'axios';
 

@@ -1,3 +1,5 @@
+/** This is a button component to display all the buttons on the webapp */
+
 import React from 'react'
 import styled from 'styled-components'
 

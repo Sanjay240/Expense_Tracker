@@ -1,3 +1,4 @@
+/** Popup component is used to show pop window on the screen and load it with transaction to update any transaction. */
 import React from 'react'
 import {Dialog, DialogTitle, DialogContent} from '@mui/material';
 import Button from './Button';

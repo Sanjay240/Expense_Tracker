@@ -1,3 +1,5 @@
+/** Discussion component shows all the messages and the input form to add a new message. */
+
 import React, { useEffect, useState } from 'react'
 import '../Styles/discussion.css'
 import { useGlobalContext } from '../Context/globalContext';

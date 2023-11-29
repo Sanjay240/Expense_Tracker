@@ -1,3 +1,5 @@
+/** This is a Chart component it takes date and amount of transactions and display all the incomes in the green line and expenses with the red line */
+
 import React from 'react'
 import {Chart as ChartJs, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ArcElement} from  'chart.js'
 import {Line} from 'react-chartjs-2'

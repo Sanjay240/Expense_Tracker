@@ -1,3 +1,4 @@
+/** Message item is used to style individual message item and display on discussion page */
 import React from 'react'
 import { like, user } from '../Utils/Icons'
 import Button from './Button'

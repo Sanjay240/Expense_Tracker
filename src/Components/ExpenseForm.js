@@ -1,3 +1,4 @@
+/** This is Expense form component to add a new expense.  */
 import React, { useState } from 'react';
 import "react-datepicker/dist/react-datepicker.css";
 import { useGlobalContext } from '../Context/globalContext';
@@ -45,6 +46,7 @@ function Form() {
             name={'title'}
             placeholder='Expense Title'
             onChange={handleInput('title')}
+            required
              />
         </div>
         <div className='input-control'>
@@ -54,10 +56,11 @@ function Form() {
             name={'amount'}
             placeholder='Amount'
             onChange={handleInput('amount')}
+            required
              />
         </div>
         <div className='input-control'>
-        <input type='date' value={date} name='date' onChange={handleInput('date')} />
+        <input type='date' value={date} name='date' onChange={handleInput('date')}  required />
         </div>
         <div className='selects input-control'>
             <select required value={category} name='category' id='category' onChange={handleInput('category')}>
