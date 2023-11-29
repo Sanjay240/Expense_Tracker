@@ -35,7 +35,7 @@ function Incomes() {
 
     useEffect(() => {
         getTransactions()
-    }, [OpenPopup])
+    }, [])
   return (
     <div className='income'>
         <div className='inner-layout'>
